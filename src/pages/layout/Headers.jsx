@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
+import NavBar from "../../components/NavBar";
 const Headers = ({ Menus }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -47,15 +48,7 @@ const Headers = ({ Menus }) => {
       )}
 
       <div className="flex justify-between">
-        <div className="mx-2">
-          <p className=" text-gray-100">Main Dashboard</p>
-          <p>Main Dashboard</p>
-        </div>
-        <div className="flex gap-2">
-          <p>Search</p>
-          <p>Notifications</p>
-          <p>Profile name</p>
-        </div>
+        <NavBar Menus={Menus}/>
       </div>
     </div>
   );
