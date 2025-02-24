@@ -1,22 +1,26 @@
-import React from 'react'
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from './pages/Layout/Layout'
-import Dashboard from './pages/layout/Dashboard';
-import OnlineEnquiry from './pages/layout/OnlineEnquiry';
+import Layout from "./pages/Layout/Layout";
+import Dashboard from "./pages/layout/Dashboard";
+import OnlineEnquiry from "./pages/layout/OnlineEnquiry";
+import View from "./pages/layout/View";
 
 const App = () => {
   return (
     <>
-    <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout/>}>
-            <Route path="/dashboard" element={<Dashboard/>} />
-            <Route path="/online-enquiry" element={<OnlineEnquiry/>} />
+          <Route path="/" element={<Layout />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/online-enquiry">
+              <Route index element={<OnlineEnquiry />} />
+              <Route path="view" element={<View />} />
             </Route>
-            </Routes>
-            </BrowserRouter>
-</>
-  )
-}
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+};
 
-export default App
+export default App;

@@ -8,8 +8,8 @@ const NavBar = ({Menus}) => {
     <div className=" flex-1 flex justify-between">
        
       <div className="mx-2">
-        <p className=" text-gray-100"> {activeMenu ? activeMenu.title : "Dashboard"}</p>
-        <p>{activeMenu ? activeMenu.title : "Dashboard"}</p>
+        <p className=" text-gray-100"> {activeMenu ? activeMenu.title : ""}</p>
+        <p>{activeMenu ? activeMenu.title : ""}</p>
       </div>
         
       <div className="flex gap-2">

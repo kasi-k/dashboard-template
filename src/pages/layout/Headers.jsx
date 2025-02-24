@@ -9,7 +9,7 @@ const Headers = ({ Menus }) => {
   };
 
   return (
-    <div className=" ">
+    <div className="">
       <p
         className="text-2xl md:hidden lg:hidden block"
         onClick={toggleDropdown}
@@ -23,11 +23,11 @@ const Headers = ({ Menus }) => {
             <p>Profile</p>
           
           </div>
-          <ul className="flex flex-wrap py-5 ">
+          <ul className="flex flex-wrap py-5">
             {Menus.map((menu, index) => (
               <NavLink to={menu.to} onClick={menu.onClick} key={index}>
                 <li
-                  className={`cursor-pointer text-md flex items-center gap-x-3 p-2 mt-1 pl-3 transition-all duration-700 ${
+                  className={`cursor-pointer text-md flex items-center gap-x-3 p-2 mt-1 pl-3 transition-all duration-700  ${
                     location.pathname === menu.to
                       ? "bg-orange-600 font-semibold transition-all duration-500"
                       : ""

@@ -9,16 +9,16 @@ const Layout = () => {
   const Menus = [
     { title: "Dashboard", icon: <AiTwotoneDashboard />, to: "/dashboard" },
     { title: "Online Enquiry", icon: "", to: "/online-enquiry" },
-    { title: "Courses", icon: "", to: "" },
-    { title: "Generate course", icon: "", to: "" },
-    { title: "Subscriptions", icon: "", to: "" },
-    { title: "Users", icon: "", to: "" },
-    { title: "Team", icon: "", to: "" },
-    { title: "Help & Support", icon: "", to: "" },
-    { title: "Reports", icon: "", to: "" },
-    { title: "Settings", icon: <IoIosSettings />, to: "" },
-    { title: "Policy", icon: "", to: "" },
-    { title: "FAQ", icon: "", to: "" },
+    { title: "Courses", icon: "", to: "/r" },
+    { title: "Generate course", icon: "", to: "/e" },
+    { title: "Subscriptions", icon: "", to: "/a" },
+    { title: "Users", icon: "", to: "/b" },
+    { title: "Team", icon: "", to: "b" },
+    { title: "Help & Support", icon: "", to: "c" },
+    { title: "Reports", icon: "", to: "l" },
+    { title: "Settings", icon: <IoIosSettings />, to: "e" },
+    { title: "Policy", icon: "", to: "a" },
+    { title: "FAQ", icon: "", to: "v" },
     { title: "Logout", icon: "", to: "#" },
   ].filter(Boolean);
 
@@ -30,14 +30,14 @@ const Layout = () => {
           <p className="text-xl font-bold">Logo</p>
         </div>
 
-        <div className="my-2">
+        <div className="my-2 ">
           <ul className="pt-3">
             {Menus.map((menu, index) => (
               <React.Fragment key={index}>
                 <NavLink to={menu.to} onClick={menu.onClick}>
                   <li
                     className={`cursor-pointer text-md flex items-center space-y-4   p-2 mt-1 pl-3 transition-all duration-700 hover:bg-orange-600 hover:font-semibold font-extralight ${
-                      location.pathname === menu.to
+                      location.pathname && location.pathname.startsWith(menu.to)
                         ? "bg-orange-600 font-semibold transition-all duration-500"
                         : ""
                     }`}
@@ -45,7 +45,7 @@ const Layout = () => {
                     <div className="flex items-center gap-x-2">
                       {menu.icon}
                       <span
-                        className={`font-poppins text-lg flex-1 duration-3`}
+                        className={`font-poppins text-lg flex-1 duration-3 `}
                       >
                         {menu.title}
                       </span>
