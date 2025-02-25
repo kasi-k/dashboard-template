@@ -23,9 +23,9 @@ const Layout = () => {
   ].filter(Boolean);
 
   return (
-    <div className="flex bg-blue-400 lg:p-6 md:p-6 w-full h-screen  ">
+    <div className="flex dark:bg-black bg-blue-400 lg:p-6 md:p-6 w-full h-screen  ">
       {/* Sidebar */}
-      <div className=" bg-white text-black rounded-xl h-fit text-nowrap lg:w-2/12 md:w-3/12 lg:block md:block hidden ">
+      <div className=" dark:bg-black dark:text-white bg-white text-black rounded-xl h-fit text-nowrap lg:w-2/12 md:w-3/12 lg:block md:block hidden ">
         <div className="flex justify-center my-4">
           <p className="text-xl font-bold">Logo</p>
         </div>

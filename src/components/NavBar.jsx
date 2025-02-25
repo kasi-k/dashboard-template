@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import Toggle from "./Toggle";
 
 const NavBar = ({Menus}) => {
     const location = useLocation();
@@ -12,10 +13,11 @@ const NavBar = ({Menus}) => {
         <p>{activeMenu ? activeMenu.title : ""}</p>
       </div>
         
-      <div className="flex gap-2">
+      <div className="flex gap-2 dark:text-white">
         <p>Search</p>
         <p>Notifications</p>
         <p>Profile name</p>
+        <Toggle/>
       </div>
     </div>
   );
